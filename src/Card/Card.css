@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    background-color: #234;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+}
+
+.card img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.card.hidden {
+    
+}
+
