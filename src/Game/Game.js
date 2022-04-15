@@ -1,7 +1,7 @@
 import Cards from '../Cards/Cards'
-import './Main.css'
+import './Game.css'
 
-const Main = () => {
+const Game = () => {
     return (
         <>
             <h1>Memory</h1>
@@ -10,4 +10,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Game
