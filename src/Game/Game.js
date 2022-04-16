@@ -3,10 +3,10 @@ import './Game.css'
 
 const Game = () => {
     return (
-        <>
+        <div className='game'>
             <h1>Memory</h1>
             <Cards />
-        </>
+        </div>
     )
 }
 
