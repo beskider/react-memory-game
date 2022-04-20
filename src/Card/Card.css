@@ -1,18 +1,16 @@
 .card {
-    display: flex;
     background-color: #234;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0.5em;  
 }
 
 .card.passed {
-     /* opacity: 0; */
+     /* visibility: hidden; */
 }
 
 .card img {
     width: 90%;
     height: 90%;
 }
-
-

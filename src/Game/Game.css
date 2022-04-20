@@ -1,11 +1,9 @@
 .game {
-    margin: 1em;
-    height: 90vh;
-    width: 90vh;
+    width: calc(90vh - 1em);
 }
 
 h1 {
-    margin-bottom: 1em;
+    margin: 0.5em 0;
     text-align: center;
     color: #eff;
 }

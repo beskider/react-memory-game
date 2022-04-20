@@ -1,10 +1,10 @@
 import './Card.css'
 
-const Card = ({id, image, status, handleClick}) => {
+const Card = ({id, image, status, handleCardClick}) => {
     return (
         <div 
             className={`card ${status}`}
-            onClick={() => handleClick(id)} 
+            onClick={() => handleCardClick(id)} 
         >
             { status === 'hidden' ? (
                     <img src='/images/cardback.png' alt="cardback" />

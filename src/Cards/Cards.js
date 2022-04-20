@@ -38,7 +38,7 @@ const Cards = () => {
     
     const [ cards, setCards ] = useState(drawCards)
 
-    const handleClick = id => {
+    const handleCardClick = id => {
         let updatedCards = [ ...cards]
         updatedCards[id].status = 'passed'
         console.log(updatedCards)
@@ -51,7 +51,7 @@ const Cards = () => {
                 <Card 
                     key={card.id} 
                     {...card} 
-                    handleClick={handleClick} 
+                    handleCardClick={handleCardClick} 
                 />
             ))}
         </div>
