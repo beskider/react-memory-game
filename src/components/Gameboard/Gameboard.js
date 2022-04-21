@@ -1,7 +1,7 @@
 import Cards from '../Cards/Cards'
-import './Game.css'
+import './Gameboard.css'
 
-const Game = () => {
+const Gameboard = () => {
 
     return (
         <div className='game'>
@@ -11,4 +11,4 @@ const Game = () => {
     )
 }
 
-export default Game
+export default Gameboard

@@ -7,10 +7,39 @@
 }
 
 .card.passed {
-     visibility: hidden;
+    visibility: hidden;
 }
 
 .card img {
     width: 90%;
     height: 90%;
+}
+
+.card.hidden {
+    animation: 0.5s hideCard linear;
+}
+.card.shown {
+    animation: 0.5s showCard linear;
+}
+
+.card.passed {
+    visibility: hidden;
+}
+
+@keyframes showCard {
+    from {
+        transform: rotateY(90deg);
+    }
+    to {
+        transform: rotateY(0);
+    }
+}
+
+@keyframes hideCard {
+    from {
+        transform: rotateY(90deg);
+    }
+    to {
+        transform: rotateY(0);
+    }
 }

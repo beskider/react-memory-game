@@ -5,33 +5,28 @@ import { useState } from 'react'
 const Cards = () => {
 
     const drawCards = () => {
+
         let images = [
             '/images/firefox.png',
-            '/images/firefox.png',
-            '/images/github.png',
             '/images/github.png',
             '/images/html.png',
-            '/images/html.png',
-            '/images/js.png',
             '/images/js.png',
             '/images/nest.png',
-            '/images/nest.png',
             '/images/node.png',
-            '/images/node.png',
-            '/images/react.png',
             '/images/react.png',
             '/images/vscode.png',
-            '/images/vscode.png' 
-        ].sort(() => Math.random() - 0.5)
+        ]
 
-        let cards = images.map( image => {
-            return {
-                image: image,
-                status: 'hidden'
-            }
-        })
-
+        let cards = 
+            [...images, ...images]
+          //  .sort( () => Math.random() - 0.5)
+            .map( image => ({
+                        image: image,
+                        status: 'hidden'
+            }))
+        
         return cards
+
     }
 
     const [ firstCard, setFirstCard ] = useState(-1)
@@ -54,20 +49,16 @@ const Cards = () => {
                 setCards([...cards])
                 setBlockClick(false)
                 setFirstCard(-1)
-            }, 1000)
+            }, 800)
         }
     }
 
     const handleCardClick = id => {
-        // there are shown cards on the board 
-        if (blockClick) return
-        
-        // the same card was clicked twice
-        if (firstCard === id) return
+                
+        if (sameCardClicked(id) || blockClick) return
 
         if (firstCard === -1 ) {
             setFirstCard(id)
-            console.log(id)
             cards[id].status = 'shown'
             setCards([...cards])
         } else {
@@ -75,9 +66,10 @@ const Cards = () => {
             setCards([...cards])
             checkPair(id)
         }
+    }
 
-
-
+    const sameCardClicked = id => {
+        return firstCard === id
     }
 
     return (
@@ -90,7 +82,7 @@ const Cards = () => {
                     handleCardClick={handleCardClick} 
                 />
             ))}
-            <h2>Moves: {moves}</h2>
+            <h3>Moves: {moves}</h3>
         </div>
     )
 }
