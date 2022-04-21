@@ -35,7 +35,7 @@ const Cards = () => {
     const [ moves, setMoves ] = useState(0)
 
     const checkPair = (id) => {
-        setMoves(moves + 1)
+        setMoves(moves => moves + 1)
         if (cards[firstCard].image === cards[id].image) {
             cards[firstCard].status = 'passed'
             cards[id].status = 'passed'
