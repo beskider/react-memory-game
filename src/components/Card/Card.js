@@ -6,15 +6,12 @@ const Card = ({id, image, status, handleCardClick}) => {
             className={`card ${status}`}
             onClick={() => handleCardClick(id)} 
         >
-            { status === 'hidden' ? (
-                    <img src='/images/cardback.png' alt="cardback" />
-                ):(
-                    <img src={image} alt="card" />
-                )
-            }
+            <img 
+                src={ status === 'hidden' ? '/images/cardback.png' : image } 
+                alt="card" 
+            />
         </div>
     ) 
-
 }
 
 export default Card
