@@ -13,7 +13,7 @@ const Card = ({id, image, status, handleCardClick}) => {
                 )
             }
         </div>
-    )
+    ) 
 
 }
 
