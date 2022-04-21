@@ -5,7 +5,6 @@ import { useState } from 'react'
 const Cards = () => {
 
     const drawCards = () => {
-        
         let images = [
             '/images/firefox.png',
             '/images/firefox.png',
@@ -35,14 +34,42 @@ const Cards = () => {
 
         return cards
     }
-    
+
+    const [ firstCard, setFirstCard ] = useState(-1)
     const [ cards, setCards ] = useState(drawCards)
 
+    const checkPair = (id) => {
+        if (cards[firstCard].image === cards[id].image) {
+            cards[firstCard].status = 'passed'
+            cards[id].status = 'passed'
+            setCards([...cards])
+            setFirstCard(-1)
+        } else {
+            setTimeout( () => {
+                cards[firstCard].status = 'hidden'
+                cards[id].status = 'hidden'
+                setCards([...cards])
+                setFirstCard(-1)
+            }, 1000)
+        }
+    }
+
     const handleCardClick = id => {
-        let updatedCards = [ ...cards]
-        updatedCards[id].status = 'passed'
-        console.log(updatedCards)
-        setCards(updatedCards)
+
+        if (firstCard === -1 ) {
+            setFirstCard(id)
+            cards[id].status = 'shown'
+            setCards([...cards])
+        } 
+
+        if (firstCard >= 0) {
+            cards[id].status = 'shown'
+            setCards([...cards])
+            checkPair(id)
+        }
+
+
+
     }
 
     return (

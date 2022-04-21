@@ -7,7 +7,7 @@
 }
 
 .card.passed {
-     /* visibility: hidden; */
+     visibility: hidden;
 }
 
 .card img {
