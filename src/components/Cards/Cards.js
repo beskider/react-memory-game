@@ -19,7 +19,7 @@ const Cards = () => {
 
         let cards = 
             [...images, ...images]
-            .sort( () => Math.random() - 0.5)
+            //.sort( () => Math.random() - 0.5)
             .map( image => ({
                         image: image,
                         status: 'hidden'
@@ -36,27 +36,22 @@ const Cards = () => {
 
     const checkPair = (id) => {
         setMoves(moves => moves + 1)
-        if (cards[firstCard].image === cards[id].image) {
-            cards[firstCard].status = 'passed'
-            cards[id].status = 'passed'
+        blockCards()
+        const status = cards[firstCard].image === cards[id].image ? 'passed' : 'hidden'
+        setTimeout( () => {
+            cards[firstCard].status = status
+            cards[id].status = status
             setCards([...cards])
             setFirstCard(-1)
-        } else {
-            setBlockClick(true)
-            setTimeout( () => {
-                cards[firstCard].status = 'hidden'
-                cards[id].status = 'hidden'
-                setCards([...cards])
-                setBlockClick(false)
-                setFirstCard(-1)
-            }, 800)
-        }
+            unblockCards()
+        }, 800)
     }
 
-    const handleCardClick = id => {
-                
-        if (sameCardClicked(id) || blockClick) return
+    const blockCards = () => setBlockClick(true)
+    const unblockCards = () => setBlockClick(false)
 
+    const handleCardClick = id => {
+        if (sameCardClicked(id) || blockClick) return
         if (firstCard === -1 ) {
             setFirstCard(id)
             cards[id].status = 'shown'
