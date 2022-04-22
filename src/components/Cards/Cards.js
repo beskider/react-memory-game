@@ -6,8 +6,8 @@ const Cards = () => {
 
     const drawCards = () => {
         let images = [
-            '/images/firefox.png',
-            '/images/github.png',
+            'assets/images/firefox.png',
+            'assets/images/github.png',
             '/images/html.png',
             '/images/js.png',
             '/images/nest.png',
