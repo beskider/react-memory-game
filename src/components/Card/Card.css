@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.5em;  
+    border-radius: 0.5em; 
 }
 
 .card.passed {
@@ -16,10 +16,15 @@
 }
 
 .card.hidden {
-    animation: 0.5s hideCard linear;
+    animation: 0.5s hideCard ease-in-out;
 }
+
+.card.hidden {
+    animation: 0.5s hideCard ease-in-out;
+}
+
 .card.shown {
-    animation: 0.5s showCard linear;
+    animation: 0.5s showCard ease-in-out;
 }
 
 .card.passed {
