@@ -5,7 +5,6 @@ import { useState } from 'react'
 const Cards = () => {
 
     const drawCards = () => {
-
         let images = [
             '/images/firefox.png',
             '/images/github.png',
@@ -16,17 +15,14 @@ const Cards = () => {
             '/images/react.png',
             '/images/vscode.png',
         ]
-
         let cards = 
             [...images, ...images]
-            //.sort( () => Math.random() - 0.5)
+            .sort( () => Math.random() - 0.5)
             .map( image => ({
-                        image: image,
-                        status: 'hidden'
+                image: image,
+                status: 'hidden'
             }))
-        
         return cards
-
     }
 
     const [ firstCard, setFirstCard ] = useState(-1)
