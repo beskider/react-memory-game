@@ -2,19 +2,19 @@ import './Cards.css'
 import Card from '../Card/Card'
 import { useState } from 'react'
 
+import firefox from '../../assets/images/firefox.png'
+import github from '../../assets/images/github.png'
+import html from '../../assets/images/html.png'
+import js from '../../assets/images/js.png'
+import nest from '../../assets/images/nest.png'
+import node from '../../assets/images/node.png'
+import react from '../../assets/images/react.png'
+import vscode from '../../assets/images/vscode.png'
+
 const Cards = () => {
 
     const drawCards = () => {
-        let images = [
-            'assets/images/firefox.png',
-            'assets/images/github.png',
-            '/images/html.png',
-            '/images/js.png',
-            '/images/nest.png',
-            '/images/node.png',
-            '/images/react.png',
-            '/images/vscode.png',
-        ]
+        let images = [ firefox, github, html, js, nest, node, react, vscode ]
         let cards = 
             [...images, ...images]
             .sort( () => Math.random() - 0.5)

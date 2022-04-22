@@ -1,5 +1,5 @@
 import './Card.css'
-import cardback from '../../assets/images/cardback.png';
+import cardback from '../../assets/images/cardback.png'
 
 const Card = ({id, image, status, handleCardClick}) => {
 
