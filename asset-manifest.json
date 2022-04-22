@@ -1,14 +1,22 @@
 {
   "files": {
     "main.css": "/react-memory-game/static/css/main.2ad52fcf.css",
-    "main.js": "/react-memory-game/static/js/main.6ecdeb5d.js",
+    "main.js": "/react-memory-game/static/js/main.0dce9dda.js",
+    "static/media/firefox.png": "/react-memory-game/static/media/firefox.5f1df890b86f11d37a7b.png",
+    "static/media/nest.png": "/react-memory-game/static/media/nest.c02e33aadb1fb1f59ad7.png",
+    "static/media/react.png": "/react-memory-game/static/media/react.673ee5f61195145d1ba4.png",
+    "static/media/vscode.png": "/react-memory-game/static/media/vscode.bb08c5cc2f30da8d5aad.png",
+    "static/media/github.png": "/react-memory-game/static/media/github.e7c65a390658c6f74554.png",
+    "static/media/node.png": "/react-memory-game/static/media/node.1794767b06db8e80c95d.png",
+    "static/media/html.png": "/react-memory-game/static/media/html.17dbf1f889a2cff59880.png",
     "static/media/cardback.png": "/react-memory-game/static/media/cardback.756c11b352206cf79f49.png",
+    "static/media/js.png": "/react-memory-game/static/media/js.fb6ae5155c00e3052f13.png",
     "index.html": "/react-memory-game/index.html",
     "main.2ad52fcf.css.map": "/react-memory-game/static/css/main.2ad52fcf.css.map",
-    "main.6ecdeb5d.js.map": "/react-memory-game/static/js/main.6ecdeb5d.js.map"
+    "main.0dce9dda.js.map": "/react-memory-game/static/js/main.0dce9dda.js.map"
   },
   "entrypoints": [
     "static/css/main.2ad52fcf.css",
-    "static/js/main.6ecdeb5d.js"
+    "static/js/main.0dce9dda.js"
   ]
 }
