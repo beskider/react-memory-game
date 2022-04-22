@@ -19,10 +19,6 @@
     animation: 0.5s hideCard ease-in-out;
 }
 
-.card.hidden {
-    animation: 0.5s hideCard ease-in-out;
-}
-
 .card.shown {
     animation: 0.5s showCard ease-in-out;
 }
